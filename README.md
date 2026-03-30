@@ -6,7 +6,7 @@ A modern and user-friendly recipe web application built using **React** and **Ma
 
 ## 🚀 Live Demo
 
-🔗 https://your-vercel-link.vercel.app
+🔗 https://tase-craft-recipe-application.vercel.app/
 
 ---
 
