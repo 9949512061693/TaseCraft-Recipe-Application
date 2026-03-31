@@ -120,7 +120,7 @@ const RegistrationForm = () => {
                         borderRadius: 4
                     }}
                 >
-                    <Stack spacing={3}>
+                    <Stack spacing={3} padding={2}>
 
                         <Typography
                             variant="h5"
@@ -135,7 +135,7 @@ const RegistrationForm = () => {
                             Create your account 👋
                         </Typography>
 
-                        {/* Inputs */}
+
                         <TextField
                             label="Name"
                             name="name"
@@ -161,7 +161,6 @@ const RegistrationForm = () => {
                             fullWidth
                         />
 
-                        {/* 🔴 Error Message */}
                         {error && (
                             <Typography
                                 sx={{

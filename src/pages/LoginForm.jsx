@@ -23,7 +23,6 @@ const LoginForm = () => {
 
     const navigate = useNavigate()
 
-    // 🧠 handle input
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -31,7 +30,6 @@ const LoginForm = () => {
         })
     }
 
-    // ✅ validation
     const validate = () => {
         if (!formData.email.trim()) {
             return "Email is required"
@@ -52,7 +50,6 @@ const LoginForm = () => {
         return ""
     }
 
-    // 🚀 submit
     const handleClick = () => {
         const validationError = validate()
 
@@ -73,7 +70,6 @@ const LoginForm = () => {
     return (
         <Box sx={{ height: '100vh', position: 'relative' }}>
 
-            {/* IMAGE */}
             <Box
                 sx={{
                     display: { xs: 'flex', sm: 'block' },
@@ -93,7 +89,6 @@ const LoginForm = () => {
                 />
             </Box>
 
-            {/* FORM */}
             <Box
                 sx={{
                     position: { xs: 'static', md: 'absolute' },
@@ -118,7 +113,7 @@ const LoginForm = () => {
                         backdropFilter: 'blur(6px)'
                     }}
                 >
-                    <Stack spacing={3}>
+                    <Stack spacing={3} sx={{ padding: 2 }}>
 
                         <Typography
                             variant="h5"
@@ -133,7 +128,6 @@ const LoginForm = () => {
                             Welcome Back 👋
                         </Typography>
 
-                        {/* Inputs */}
                         <TextField
                             label="Email"
                             name="email"
@@ -151,7 +145,6 @@ const LoginForm = () => {
                             fullWidth
                         />
 
-                        {/* 🔴 Error */}
                         {error && (
                             <Typography
                                 sx={{
@@ -164,7 +157,6 @@ const LoginForm = () => {
                             </Typography>
                         )}
 
-                        {/* Button */}
                         <Button
                             onClick={handleClick}
                             variant="contained"
